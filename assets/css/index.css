@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +26,7 @@ header > .container {
 h1 {
     margin-bottom: 40px;
     font-family: 'Nanum Pen Script', cursive;
-    font-size: 46px;
+    font-size: 40px;
     color: white;
 }
 #headerBtn {
@@ -35,20 +37,70 @@ h1 {
     font-size: 32px;
     padding: 5px 30px;
 }
-#headerBtn:hover{
+#headerBtn:hover {
     color: red;
     border-color: red;
 }
+.no-dragging {
+    -ms-user-select: none; 
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
 
-.container > div {
-    height: 200px;
+nav {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    position: sticky;
+    top: 0px; left: 0px;
 }
-.about {
-    background-color: turquoise;
+nav > .row > .col-sm {
+    padding: 5px 0;
 }
-.portfoilo {
+nav > .row > .col-sm:hover {
+    /* background-color: white; */
+    color: #E53A40; 
+    font-weight: 800;
+}
+
+section { 
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.inner-container {
+    text-align: center;
+}
+.content-header > h2 {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+hr.hr-under-content-header {
+    display: inline-block;
+    margin: 0 auto 30px; 
+    width: 80px;
+    height: 3px;
+    color: black;
+    background-color: black;
+}
+
+
+#about {
+    background-color: white;
+}
+#about-skill {
+    margin: 20px;
     background-color: gray;
+    height: 300px;
 }
-.contact {
+
+#portfoilo {
+    background-color: lightgray;
+}
+#contact {
     background-color: darkgray;
 }

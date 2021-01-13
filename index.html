@@ -4,23 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="assets/css/index.css">
+
 </head>
 <body>
     
     <header>
-        <div class="container">
+        <div class="container no-dragging">
             <h1>환영합니다.</h1>
             <h1>임종환의 포트폴리오 입니다.</h1>
             <button id="headerBtn">구경하러가기</button>
         </div>
     </header>
 
-    <div class="container">
-        <div class="about"></div>
-        <div class="portfoilo"></div>
-        <div class="contact"></div>
-    </div>
+    <!--
+    <nav>
+        <div class="navigator">HOME</div>
+        <div class="navigator">ABOUT</div>
+        <div class="navigator">PORTFOLIO</div>
+        <div class="navigator">CONTACT</div>
+    </nav>
+    -->
+
+    <nav>
+        <div class="row">
+            <div class="col-sm">HOME</div>
+            <div class="col-sm">ABOUT</div>
+            <div class="col-sm">PORTFOLIO</div>
+            <div class="col-sm">CONTACT</div>
+        </div>
+    </nav>
+
+    <section id="about">
+        <div class="container-lg inner-container">
+            <div class="content-header">
+                <h2>About Me</h2>
+            </div>
+            <hr class="hr-under-content-header">
+            <div class="row">
+                <div class="col-lg">
+                    <div class="content">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio est architecto, maiores laborum provident similique autem adipisci nemo pariatur saepe incidunt! Explicabo numquam sint doloribus est, ipsa dignissimos ducimus? Vitae.
+                    </div>
+                </div>
+                <div class="col-lg">
+                    <div id="about-skill" class="content">
+                        Skills
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="portfoilo">
+        <div class="container-lg inner-container">
+            <div class="content-header">
+                <h2>Portfoilo</h2>
+            </div>
+            <hr class="hr-under-content-header">
+            <div class="content">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio est architecto, maiores laborum provident similique autem adipisci nemo pariatur saepe incidunt! Explicabo numquam sint doloribus est, ipsa dignissimos ducimus? Vitae.
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container-lg inner-container">
+            <div class="content-header">
+                <h2>Contact</h2>
+            </div>
+            <hr class="hr-under-content-header">
+            <div class="content">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio est architecto, maiores laborum provident similique autem adipisci nemo pariatur saepe incidunt! Explicabo numquam sint doloribus est, ipsa dignissimos ducimus? Vitae.
+            </div>
+        </div>
+    </section>
+
+    <footer>
+
+    </footer>
+    
 </body>
 </html>
