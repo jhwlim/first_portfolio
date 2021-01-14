@@ -8,7 +8,6 @@
 }
 header {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/header_bg.jpg');
-    /* background-image: url('../images/header_bg.jpg'); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -22,15 +21,22 @@ header {
 header > .container {
     margin: 0px auto;
     text-align: center;
+    width: 375px;
 }
 h1 {
     margin-bottom: 40px;
     font-family: 'Nanum Pen Script', cursive;
     font-size: 40px;
     color: white;
+    line-height: 80px;
 }
-h1 > span {
-    display: inline-block;
+@media (max-width: 374px) {
+    h1 > span::after {
+        content: "";
+        display: block;
+    }
+}
+.header-name {
     letter-spacing: 6px;
     font-size: 44px;
     color: white;
@@ -70,14 +76,14 @@ nav > .container-lg > .row > .col-sm {
     padding: 5px 0;
 }
 nav > .container-lg > .row > .col-sm:hover {
-    /* background-color: white; */
     color: #E53A40; 
     font-weight: 800;
 }
 
 section { 
-    padding-top: 40px;
+    padding-top: 60px;
     padding-bottom: 40px;
+    height: 100vh;
 }
 .inner-container {
     text-align: center;

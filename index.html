@@ -14,21 +14,23 @@
 </head>
 <body>
     
-    <header>
+    <header id="header">
         <div class="container no-dragging">
-            <h1>환영합니다.</h1>
-            <h1><span class="header-name">아무개</span>의 포트폴리오 입니다.</h1>
-            <button id="headerBtn">구경하러가기</button>
+            <h1>
+                환영합니다. <br>
+                <span><span class="header-name">아무개</span>의</span> 포트폴리오 입니다.
+            </h1>
+            <button id="headerBtn" onclick="location.href='#navigator'">구경하러가기</button>
         </div>
     </header>
 
-    <nav>
+    <nav id="navigator">
         <div class="container-lg">
             <div class="row">
-                <div class="col-sm">HOME</div>
-                <div class="col-sm">ABOUT</div>
-                <div class="col-sm">PORTFOLIO</div>
-                <div class="col-sm">CONTACT</div>
+                <div class="col-sm" onclick="location.href='#header'">HOME</div>
+                <div class="col-sm" onclick="location.href='#about'">ABOUT</div>
+                <div class="col-sm" onclick="location.href='#portfoilo'">PORTFOLIO</div>
+                <div class="col-sm" onclick="location.href='#contact'">CONTACT</div>
             </div>
         </div>
     </nav>
