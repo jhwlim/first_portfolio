@@ -29,6 +29,14 @@ h1 {
     font-size: 40px;
     color: white;
 }
+h1 > span {
+    display: inline-block;
+    letter-spacing: 6px;
+    font-size: 44px;
+    color: white;
+    border-bottom: 2px solid white;
+}
+
 #headerBtn {
     background-color: transparent;
     border: 1px solid white;
@@ -38,7 +46,7 @@ h1 {
     padding: 5px 30px;
 }
 #headerBtn:hover {
-    color: red;
+    color: #E53A40;
     border-color: red;
 }
 .no-dragging {
@@ -58,10 +66,10 @@ nav {
     position: sticky;
     top: 0px; left: 0px;
 }
-nav > .row > .col-sm {
+nav > .container-lg > .row > .col-sm {
     padding: 5px 0;
 }
-nav > .row > .col-sm:hover {
+nav > .container-lg > .row > .col-sm:hover {
     /* background-color: white; */
     color: #E53A40; 
     font-weight: 800;
