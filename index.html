@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <!-- jQuery-->
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
+
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
+    <!-- awesome icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="assets/css/index.css">
 
 </head>
@@ -28,7 +36,7 @@
         <div class="container-lg">
             <div class="row">
                 <div class="col-sm" onclick="location.href='#header'">HOME</div>
-                <div class="col-sm" onclick="location.href='#about'">ABOUT</div>
+                <div class="col-sm" onclick="location.href='#about'">ABOUT ME</div>
                 <div class="col-sm" onclick="location.href='#portfoilo'">PORTFOLIO</div>
                 <div class="col-sm" onclick="location.href='#contact'">CONTACT</div>
             </div>
@@ -38,34 +46,174 @@
     <section id="about">
         <div class="container-lg inner-container">
             <div class="content-header">
-                <h2>About Me</h2>
-            </div>
-            <hr class="hr-under-content-header">
+                <h2>ABOUT ME</h2>
+            </div> 
+            <hr class="hr-under-content-header">    
             <div class="row">
-                <div class="col-lg">
-                    <div class="content">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio est architecto, maiores laborum provident similique autem adipisci nemo pariatur saepe incidunt! Explicabo numquam sint doloribus est, ipsa dignissimos ducimus? Vitae.
+                <div class="col-lg content-box">
+                    <div id= "aboutTextContent" class="about-text">
+                        <h4>써 노루, 별 비둘기, 없이</h4>
+                        <p>
+                            된 나의 위에 애기 지나고 너무나 했던 버리었습니다. 추억과 쓸쓸함과 청춘이 까닭입니다. 아침이 다 잔디가 별 없이 별 내 이름자를 내린 있습니다. 이름과, 했던 소학교 지나고 별 버리었습니다. 비둘기, 마디씩 슬퍼하는 사랑과 봅니다. 다하지 지나가는 쉬이 하나에 언덕 있습니다.
+                        </p>
+                        <h4>청춘이 내일 피어나듯이</h4>
+                        <p>
+                            흙으로 하늘에는 무덤 때 청춘이 동경과 내일 버리었습니다. 말 불러 남은 별이 내 흙으로 위에 이름자를 듯합니다. 아침이 그러나 계절이 부끄러운 말 봅니다. 별들을 속의 새워 오는 이름과, 겨울이 나는 있습니다. 위에도 하나 별 거외다. 이름을 비둘기, 소학교 별을 듯합니다.
+                        </p>
+                    </div>
+                    
+                </div>
+                <div id="aboutTableArea" class="col-lg content-box">
+                    <div id="aboutTableContent" class="about-table">
+                        <table id="aboutTable" class="table">
+                            <tr>
+                                <td><div class="table-icon"><i class="fas fa-envelope"></i></div></td>
+                                <th>E-mail</th>
+                                <td>jhwlim25@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <td><div class="table-icon"><i class="fab fa-github"></i></div></td>
+                                <th>Github</th>
+                                <td><a href="https://github.com/jhwlim">https://github.com/jhwlim</a></td>
+                            </tr>
+                            <tr>
+                                <td><div class="table-icon"><i class="fab fa-blogger-b"></i></div></td>
+                                <th>BLOG</th>
+                                <td>Lorem ipsum dolor</td>
+                            </tr>
+                            <tr>
+                                <td><div class="table-icon"><i class="fas fa-graduation-cap"></i></div></td>
+                                <th><span>Education</span></th>
+                                <td>sit amet consectetur</td>
+                            </tr>
+                            <tr>
+                                <td><div class="table-icon"><i class="fas fa-award"></i></div></td>
+                                <th>Certification</th>
+                                <td>
+                                    <ul>
+                                        <li>adipisicing elit. Quas, animi</li>
+                                        <li>Lorem ipsum dolor sit</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><div class="table-icon"><i class="fas fa-ellipsis-h"></i></div></td>
+                                <th>Others</th>
+                                <td>
+                                    <ul>
+                                        <li>adipisicing elit. Quas, animi</li>
+                                        <li>Lorem ipsum dolor sit</li>
+                                        <li>Lorem ipsum dolor sit</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
-                <div class="col-lg">
-                    <div id="about-skill" class="content">
-                        Skills
-                    </div>
-                </div>
-                
             </div>
             
+            <div class="row">
+                <div class="col-lg">
+                    <div class="content-subheader">
+                        <h3>SKILLS</h3>
+                    </div>
+                    <div id="about-skill" class="content no-dragging">
+                        <div class="about-skill-row">
+                            <div class="hex-outer">
+                                <div class="hex-inner">
+                                    <img src="assets/images/spring_logo.png" alt="">
+                                </div>
+                                <div class="hex-inner hex-on-mouse">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="hex-blank">
+                                <div class="hex-inner">
+                                    <img src="assets/images/blank.png"></img>
+                                </div>
+                                <div class="hex-inner hex-on-mouse">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-skill-row">
+                            <div class="hex-outer">
+                                <div class="hex-inner">
+                                    <img src="assets/images/html_logo.png" alt="">
+                                </div>
+                                <div class="hex-inner hex-on-mouse">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="hex-outer">
+                                <div class="hex-inner">
+                                    <img src="assets/images/css_logo.png" alt="">
+                                </div>
+                                <div class="hex-inner hex-on-mouse">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="hex-outer">
+                                <div class="hex-inner">
+                                    <img src="assets/images/js_logo.png" alt="">
+                                </div>
+                                <div class="hex-inner hex-on-mouse">
+                                    <span></span>
+                                </div>
+                            </div>    
+                        </div>  
+                        <div class="about-skill-row">
+                            <div class="hex-outer">
+                                <div class="hex-inner">
+                                    <img src="assets/images/jquery_logo.png" alt="">
+                                </div>
+                                <div class="hex-inner hex-on-mouse">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="hex-outer">
+                                <div class="hex-inner">
+                                    <img src="assets/images/git_logo.png" alt="">
+                                </div>
+                                <div class="hex-inner hex-on-mouse">
+                                    <span></span>
+                                </div>
+                            </div>  
+                        </div>  
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-
+    
+    
     <section id="portfoilo">
         <div class="container-lg inner-container">
             <div class="content-header">
-                <h2>Portfoilo</h2>
+                <h2>PORTFOILO</h2>
             </div>
             <hr class="hr-under-content-header">
-            <div class="content">
+            <div>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio est architecto, maiores laborum provident similique autem adipisci nemo pariatur saepe incidunt! Explicabo numquam sint doloribus est, ipsa dignissimos ducimus? Vitae.
+            </div>
+            <div class="portfoilo-area">
+                <div class="row">
+                    <div class="col-lg">
+                        <div class="portfoilo-unit">
+                            <img src="assets/images/header_bg.jpg" alt="">
+                            <div class="portfoilo-description">
+                                <span>#PROJECT1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="portfoilo-unit">
+                            <div class="portfoilo-description">
+                                <span>#PROJECT2</span>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -73,18 +221,21 @@
     <section id="contact">
         <div class="container-lg inner-container">
             <div class="content-header">
-                <h2>Contact</h2>
+                <h2>CONTACT</h2>
             </div>
             <hr class="hr-under-content-header">
-            <div class="content">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio est architecto, maiores laborum provident similique autem adipisci nemo pariatur saepe incidunt! Explicabo numquam sint doloribus est, ipsa dignissimos ducimus? Vitae.
+            <div id="contactContent">
+                <table class="table table-borderless">
+                    <tr>
+                        <td><div class="table-icon"><i class="fas fa-envelope"></i></div></td>
+                        <th>E-mail :</th>
+                        <td>jhwlim25@gmail.com</td>
+                    </tr>
+                </table>
+                
             </div>
         </div>
     </section>
 
-    <footer>
-
-    </footer>
-    
 </body>
 </html>
