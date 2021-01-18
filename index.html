@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio</title>
     <!-- jQuery-->
     <script
         src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -23,10 +23,10 @@
 <body>
     
     <header id="header">
-        <div class="container no-dragging">
+        <div id="headerContent" class="container no-dragging">
             <h1>
                 환영합니다. <br>
-                <span><span class="header-name">아무개</span>의</span> 포트폴리오 입니다.
+                <span><span class="header-name">임종환</span>의</span> 포트폴리오 입니다.
             </h1>
             <button id="headerBtn" onclick="location.href='#navigator'">구경하러가기</button>
         </div>
@@ -102,8 +102,8 @@
                                 <th>Others</th>
                                 <td>
                                     <ul>
-                                        <li>기획팀 정규직('18.2월~'20.5월)</li>
-                                        <li>'자바 웹개발자' 국비지원과정 수료 예정('20.10월~'21.3월)</li>
+                                        <li>제조업 개발기획('18.2월~'20.5월)</li>
+                                        <li>'자바 웹개발자 양성 과정' 국비지원과정 수료 예정('20.10월~'21.3월)</li>
                                         <li></li>
                                     </ul>
                                 </td>
@@ -239,7 +239,11 @@
     </section>
 
     <script>
-        
+        $(document).ready(function() {
+            $('#headerBtn').mouseover(function() {
+               
+            });
+        });
     </script>
 
 </body>

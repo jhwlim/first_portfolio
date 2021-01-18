@@ -12,12 +12,16 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    
     height: 100vh;
     min-height: 400px;
     display: flex;
     align-items: center;
-    opacity : 1;
+    animation-duration: 2s;
+    animation-name: headerbgdarker;
+}
+@keyframes headerbgdarker {
+    from { opacity: 0.0; }
+    to { opacity: 1.0; }
 }
 header > .container {
     margin: 0px auto;
@@ -37,23 +41,35 @@ h1 {
         display: block;
     }
 }
+#headerContent {
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-name: header-content-down;
+    
+}
+@keyframes header-content-down {
+    from {margin-bottom: 100%;}
+    to {margin-bottom: 0;}
+}
 .header-name {
     letter-spacing: 6px;
     font-size: 44px;
     color: white;
     border-bottom: 2px solid white;
 }
+.header-name:hover {
+    color: #ff2e63;
+}
 #headerBtn {
     background-color: transparent;
-    border: 1px solid white;
+    border: 3px solid white;
     color: white;
     font-family: 'Nanum Pen Script', cursive;
     font-size: 32px;
     padding: 5px 30px;
 }
 #headerBtn:hover {
-    color: #E53A40;
-    border-color: red;
+    background-color: #08d9d6;
 }
 .no-dragging {
     -ms-user-select: none; 
@@ -78,8 +94,7 @@ hr.hr-under-content-header {
     display: inline-block;
     margin: 0 auto 40px; 
     width: 80px;
-    height: 3px;
-    color: black;
+    height: 4px;
     background-color: black;
 }
 .content-subheader > h3 {
@@ -96,7 +111,7 @@ hr.hr-under-content-header {
     # NAVIGATOR
 */
 nav {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(37, 42, 52, 1);
     color: white;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -109,7 +124,7 @@ nav > .container-lg > .row > .col-sm {
     padding: 5px 0;
 }
 nav > .container-lg > .row > .col-sm:hover {
-    color: #E53A40; 
+    color: #ff2e63; 
     font-weight: 800;
 }
 
@@ -217,6 +232,7 @@ nav > .container-lg > .row > .col-sm:hover {
 .hex-on-mouse {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(8, 217, 214, 0.5);
     display: none;
 }
 .hex-outer:hover .hex-on-mouse {
@@ -241,7 +257,7 @@ nav > .container-lg > .row > .col-sm:hover {
     # PORTFOILO
 */
 #portfoilo {
-    background-color: lightgray;
+    background-color: #eaeaea;
 }
 .portfoilo-area {
     margin: 20px;
