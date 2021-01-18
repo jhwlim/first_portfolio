@@ -131,14 +131,14 @@ nav > .container-lg > .row > .col-sm:hover {
     margin-bottom: 20px;
 }
 .about-table {
-    padding: 10px 20px;
     text-align: left;
 }
 #aboutTable {
     font-family: 'Montserrat', sans-serif;
-    width: 400px;
     margin: 0 auto;
+    max-width: 500px;
 }
+
 #aboutTable > tr > th {
     font-weight: 700;
 }
@@ -163,6 +163,17 @@ nav > .container-lg > .row > .col-sm:hover {
 #aboutTable ul:last-child {
     margin-bottom: 0px;
 }
+@media(max-width: 424px) {
+    #aboutTable {
+        width: 100%;
+        font-size: 0.7em;
+    }
+    .table-icon {
+        height: 18px;
+        width: 18px;
+    }
+}
+
 .hex-outer {
     clip-path: polygon(50% 0, 100% 30%, 100% 70%, 50% 100%, 0% 70%, 0 30%);
     filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.2)) drop-shadow(0 2px 3px rgba(0, 0, 0, 0.4));
@@ -181,6 +192,27 @@ nav > .container-lg > .row > .col-sm:hover {
     width: 100%;
     height: 100%
 }
+.hex-blank {
+    clip-path: polygon(50% 0, 100% 30%, 100% 70%, 50% 100%, 0% 70%, 0 30%);
+    width: 100px;
+    height: 110px;
+    display: inline-block;
+}
+@media(max-width: 424px) {
+    .hex-outer {
+        width: 80px;
+        height: 90px;
+    }
+    .hex-blank {
+        width: 80px;
+        height: 90px;
+    }
+    .hex-inner {
+        width: 72px;
+        height: 78px;
+        top: 6px; left: 4px;
+    }
+}
 
 .hex-on-mouse {
     position: absolute;
@@ -197,18 +229,14 @@ nav > .container-lg > .row > .col-sm:hover {
     text-align: center;
     width: 100%;
 }
-.hex-blank {
-    clip-path: polygon(50% 0, 100% 30%, 100% 70%, 50% 100%, 0% 70%, 0 30%);
-    width: 100px;
-    height: 110px;
-    display: inline-block;
-}
+
 .about-skill-row {
     margin-bottom: -30px;;
 }
 .about-skill-row:last-child {
     margin-bottom: 0px;
 }
+
 /*
     # PORTFOILO
 */
@@ -255,6 +283,9 @@ nav > .container-lg > .row > .col-sm:hover {
     align-items: center;
 }
 
+/*
+    # CONTACT
+*/
 #contact {
     background-color: darkgray;
 }
