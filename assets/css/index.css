@@ -67,6 +67,7 @@ h1 {
     font-family: 'Nanum Pen Script', cursive;
     font-size: 32px;
     padding: 5px 30px;
+    width: 180px;
 }
 #headerBtn:hover {
     background-color: #08d9d6;
@@ -297,6 +298,8 @@ nav > .container-lg > .row > .col-sm:hover {
     
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
+}
+.fill-bar {
     animation-name: fillingBar;
     animation-duration: 4s;
 }
