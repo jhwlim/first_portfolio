@@ -190,6 +190,10 @@ nav > .container-lg > .row > .col-sm:hover {
     }
 }
 
+.cursor-hand {
+    cursor: pointer;
+}
+
 .hex-outer {
     clip-path: polygon(50% 0, 100% 30%, 100% 70%, 50% 100%, 0% 70%, 0 30%);
     filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.2)) drop-shadow(0 2px 3px rgba(0, 0, 0, 0.4));
@@ -234,7 +238,7 @@ nav > .container-lg > .row > .col-sm:hover {
     position: absolute;
     display: none;
 }
-.hex-outer:hover {
+.hex-rotateY {
     animation: rotateY 2s infinite linear;
 }
 @keyframes rotateY {
