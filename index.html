@@ -37,6 +37,7 @@
             <div class="row">
                 <div class="col-sm" onclick="location.href='#header'">HOME</div>
                 <div class="col-sm" onclick="location.href='#about'">ABOUT ME</div>
+                <div class="col-sm" onclick="location.href='#skill'">SKILL</div>
                 <div class="col-sm" onclick="location.href='#portfoilo'">PORTFOLIO</div>
                 <div class="col-sm" onclick="location.href='#contact'">CONTACT</div>
             </div>
@@ -52,12 +53,12 @@
             <div class="row">
                 <div class="col-lg content-box">
                     <div id= "aboutTextContent" class="about-text">
-                        <h4>써 노루, 별 비둘기, 없이</h4>
                         <p>
+                            <h4>써 노루, 별 비둘기, 없이</h4>
                             된 나의 위에 애기 지나고 너무나 했던 버리었습니다. 추억과 쓸쓸함과 청춘이 까닭입니다. 아침이 다 잔디가 별 없이 별 내 이름자를 내린 있습니다. 이름과, 했던 소학교 지나고 별 버리었습니다. 비둘기, 마디씩 슬퍼하는 사랑과 봅니다. 다하지 지나가는 쉬이 하나에 언덕 있습니다.
                         </p>
-                        <h4>청춘이 내일 피어나듯이</h4>
                         <p>
+                            <h4>청춘이 내일 피어나듯이</h4>
                             흙으로 하늘에는 무덤 때 청춘이 동경과 내일 버리었습니다. 말 불러 남은 별이 내 흙으로 위에 이름자를 듯합니다. 아침이 그러나 계절이 부끄러운 말 봅니다. 별들을 속의 새워 오는 이름과, 겨울이 나는 있습니다. 위에도 하나 별 거외다. 이름을 비둘기, 소학교 별을 듯합니다.
                         </p>
                     </div>
@@ -113,14 +114,30 @@
                 </div>
             </div>
             
-            <div id="aboutSkillHeader" class="content-subheader cursor-hand">
-                <h3>SKILLS</h3>
+            
+        </div>
+    </section>
+    <section id="skill">
+        <div class="container-lg inner-container">
+            <div class="content-header">
+                <h2>SKILL</h2>
+            </div>
+            <hr class="hr-under-content-header hr-white">
+            <div class="text-area">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, voluptates. Quae animi suscipit ipsum culpa commodi voluptas repellendus aliquam maxime quidem eos? Laborum earum reprehenderit voluptas qui iure quibusdam? Suscipit.
             </div>
             <div class="row">
                 <div class="col-lg">
+                    
+                    <div id="aboutSkillHeader" class="content-subheader">
+                        <h3 id="aboutSkillAll" class="cursor-hand about-skill-header-selected">ALL</h3>
+                        <h3 id="aboutSkillFront" class="cursor-hand">Front</h3>
+                        <h3 id="aboutSkillBack" class="cursor-hand">Back</h3>
+                    </div>
+                    
                     <div id="about-skill" class="content no-dragging">
                         <div class="about-skill-row">
-                            <div class="hex-outer">
+                            <div class="hex-outer not-frontend">
                                 <label for="skillSpring" class="cursor-hand">
                                     <div class="hex-inner">
                                         <img src="assets/images/spring_logo.png" alt="">
@@ -134,13 +151,10 @@
                                 <div class="hex-inner">
                                     <img src="assets/images/blank.png"></img>
                                 </div>
-                                <div class="hex-inner hex-on-mouse">
-                                    <span></span>
-                                </div>
                             </div>
                         </div>
                         <div class="about-skill-row">
-                            <div class="hex-outer">
+                            <div class="hex-outer not-backend">
                                 <label for="skillHtml" class="cursor-hand">
                                     <div class="hex-inner">
                                         <img src="assets/images/html_logo.png" alt="">
@@ -150,7 +164,7 @@
                                     </div>
                                 </label>
                             </div>
-                            <div class="hex-outer">
+                            <div class="hex-outer not-backend">
                                 <label for="skillCss" class="cursor-hand">
                                     <div class="hex-inner">
                                         <img src="assets/images/css_logo.png" alt="">
@@ -160,7 +174,7 @@
                                     </div>
                                 </label>
                             </div>
-                            <div class="hex-outer">
+                            <div class="hex-outer not-backend">
                                 <label for="skillJs" class="cursor-hand">
                                     <div class="hex-inner">
                                         <img src="assets/images/js_logo.png" alt="">
@@ -172,7 +186,7 @@
                             </div>    
                         </div>  
                         <div class="about-skill-row">
-                            <div class="hex-outer">
+                            <div class="hex-outer not-backend">
                                 <label for="skillJQuery" class="cursor-hand">
                                     <div class="hex-inner">
                                         <img src="assets/images/jquery_logo.png" alt="">
@@ -195,7 +209,7 @@
                         </div>  
                     </div>
                 </div>
-                <div class="col-lg">
+                <div id="aboutSkillBoxCol" class="col-lg">
                     <div id="aboutSkillBox" class="skill-explain-content-box">
                         <div id="skillSpring" class="skill-explain-content-row">
                             <div class="skill-explain-content skill-explain-name">Spring</div>
@@ -287,7 +301,6 @@
         </div>
     </section>
     
-    
     <section id="portfoilo">
         <div class="container-lg inner-container">
             <div class="content-header">
@@ -370,6 +383,18 @@
                 if (top > windowTop && top < windowTop + windowHeight) {
                     $('.skill-explain-bar>div').addClass('fill-bar');
                 }
+
+                var skillSection = $("#skill");
+                var topOfSkillSection = skillSection.offset().top;
+                var bottomOfSkillSection = topOfSkillSection + skillSection.height() + 40;
+                var navHeight = $('nav').height();
+                if (windowTop >= topOfSkillSection - navHeight && windowTop <= bottomOfSkillSection) {
+                    $('#navigator').css('background-color', 'rgba(255, 255, 255, 0.5)');
+                    $('#navigator').css('color', 'rgba(37, 42, 52, 1)');
+                } else {
+                    $('#navigator').css('background-color', 'rgba(37, 42, 52, 1)');
+                    $('#navigator').css('color', 'white');
+                }
             });
 
             $('.hex-outer').click(function() {
@@ -401,9 +426,9 @@
                 
             });
 
-            $('#aboutSkillHeader').click(function() {
+            $('#aboutSkillAll').click(function() {
                 $('.hex-outer').removeClass('hex-rotateY');
-                
+                $('.hex-outer').removeClass('hex-blur');
                 $(".skill-explain-bar>div").removeClass('fill-bar');
                 setTimeout(function() {
                     $(".skill-explain-bar>div").addClass('fill-bar');
@@ -412,6 +437,22 @@
                 $('.skill-explain-detail').hide();    
                 
                 $(".skill-explain-content-row").show();
+            });
+            $('#aboutSkillFront').click(function() {
+                $('.hex-outer').removeClass('hex-blur');
+                $('.hex-outer.not-frontend').addClass('hex-blur');
+            });
+            $('#aboutSkillBack').click(function() {
+                $('.hex-outer').removeClass('hex-blur');
+                $('.hex-outer.not-backend').addClass('hex-blur');
+            });
+
+            $('#aboutSkillHeader>h3').click(function() {
+                if (!$(this).hasClass('about-skill-header-selected')) {
+                    $('#aboutSkillHeader>h3').removeClass('about-skill-header-selected');
+                    $(this).addClass('about-skill-header-selected');
+                   
+                }
             });
 
         });
