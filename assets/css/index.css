@@ -7,7 +7,7 @@
     padding: 0;
 }
 header {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/header_bg.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/header_bg3.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -45,7 +45,6 @@ h1 {
     animation-duration: 2s;
     animation-delay: 0s;
     animation-name: header-content-down;
-    
 }
 @keyframes header-content-down {
     from {margin-bottom: 100%;}
@@ -54,7 +53,8 @@ h1 {
 .header-name {
     letter-spacing: 6px;
     font-size: 44px;
-    color: white;
+    /* color: white; */
+    color: #ff2e63;    
     border-bottom: 2px solid white;
 }
 .header-name:hover {
@@ -70,7 +70,9 @@ h1 {
     width: 180px;
 }
 #headerBtn:hover {
+    /* color: #ff2e63; */
     background-color: #08d9d6;
+    /* border-color: #ff2e63; */
 }
 .no-dragging {
     -ms-user-select: none; 
@@ -275,7 +277,7 @@ nav > .container-lg > .row > .col-sm:hover {
     font-family: 'Montserrat', sans-serif;
 }
 .skill-explain-name {
-    width: 120px; 
+    min-width: 120px; 
     background-color: #08d9d6;
     /* background-color: #3CAeA3; */
     color: white;
