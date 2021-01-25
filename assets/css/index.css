@@ -1,12 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
-
-/* * {
-    margin: 0;
-    padding: 0;
-} */
-header {
+.header {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/header_bg3.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -23,25 +15,10 @@ header {
     from { opacity: 0.0; }
     to { opacity: 1.0; }
 }
-header > .container {
+.header__content {
     margin: 0px auto;
-    text-align: center;
     width: 375px;
-}
-h1 {
-    margin-bottom: 40px;
-    font-family: 'Nanum Pen Script', cursive;
-    font-size: 40px;
-    color: white;
-    line-height: 80px;
-}
-@media (max-width: 374px) {
-    h1 > span::after {
-        content: "";
-        display: block;
-    }
-}
-#headerContent {
+    text-align: center;
     animation-duration: 2s;
     animation-delay: 0s;
     animation-name: header-content-down;
@@ -50,17 +27,32 @@ h1 {
     from {margin-bottom: 100%;}
     to {margin-bottom: 0;}
 }
-.header-name {
+
+.header__text {
+    margin-bottom: 40px;
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 40px;
+    color: white;
+    line-height: 80px;
+}
+@media (max-width: 374px) {
+    .header--narrow::after {
+        content: "";
+        display: block;
+    }
+}
+
+.header__name {
     letter-spacing: 6px;
     font-size: 44px;
     /* color: white; */
     color: #ff2e63;    
     border-bottom: 2px solid white;
 }
-.header-name:hover {
+.header__name:hover {
     color: #ff2e63;
 }
-#headerBtn {
+.header__btn {
     background-color: transparent;
     border: 3px solid white;
     color: white;
@@ -69,18 +61,10 @@ h1 {
     padding: 5px 30px;
     width: 180px;
 }
-#headerBtn:hover {
-    /* color: #ff2e63; */
+.header__btn:hover {
     background-color: #08d9d6;
-    /* border-color: #ff2e63; */
 }
-.no-dragging {
-    -ms-user-select: none; 
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
-}
+
 section { 
     padding-top: 60px;
     padding-bottom: 40px;
