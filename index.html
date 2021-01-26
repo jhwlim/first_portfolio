@@ -8,8 +8,8 @@
 <!-- reset.css -->
 <link rel="stylesheet" href="assets/css/reset.css">
 <!-- font -->
-<!-- <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 <!-- awesome icons -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 <!-- Bootstrap -->
@@ -33,22 +33,19 @@
             <p>환영합니다.</p>
             <span class="header__text--narrow"><span class="header__name">홍길동</span>의</span> 포트폴리오 입니다.
         </h1>
-        <button id="headerBtn" class="header__btn" onclick="location.href='#navigator'">궁금하신가요?</button>
-    </div>
-    
+        <button id="homeBtn" class="header__btn">궁금하신가요?</button>
+    </div>    
 </header>
 
-<nav id="navigator">
-    <div class="container-lg">
-        <div class="row">
-            <div class="col-sm" onclick="location.href='#header'">HOME</div>
-            <div class="col-sm" onclick="location.href='#about'">ABOUT ME</div>
-            <div class="col-sm" onclick="location.href='#skill'">SKILL</div>
-            <div class="col-sm" onclick="location.href='#portfoilo'">PORTFOLIO</div>
-            <div class="col-sm" onclick="location.href='#contact'">CONTACT</div>
-        </div>
+<nav class="gnb">
+    <div class="row gnb__menu">
+        <a href="#header" class="col-sm gnb__item">HOME</a>
+        <a href="#about" class="col-sm gnb__item">ABOUT ME</a>
+        <a href="#skill" class="col-sm gnb__item">SKILL</a>
+        <a href="#portfoilo" class="col-sm gnb__item">PORTFOLIO</a>
+        <a href="#contact" class="col-sm gnb__item">CONTACT</a>
     </div>
-</nav>
+</nav> 
 
 <section id="about">
     <div class="container-lg inner-container">
@@ -358,13 +355,18 @@
 
 <script>
     $(document).ready(function() {
-        // 헤더 버튼 hover 이벤트
-        $('#headerBtn').mouseover(function() {
-            $(this).html('구경하러가기');
+
+        $('#homeBtn').click(() => {
+            $('#navigator').focus();
         });
-        $('#headerBtn').mouseout(function() {
-            $(this).text("궁금하신가요?");
-        }); 
+
+        // // 헤더 버튼 hover 이벤트
+        // $('#headerBtn').mouseover(function() {
+        //     $(this).html('구경하러가기');
+        // });
+        // $('#headerBtn').mouseout(function() {
+        //     $(this).text("궁금하신가요?");
+        // }); 
         
         // About-Skills 가 viewport에 들어왔을 때 확인하기
         function elementInViewPort(el) {
