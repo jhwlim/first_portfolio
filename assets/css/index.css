@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
-/* HEADER */
+/* # HEADER */
 .header {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/header_bg3.jpg');
     background-size: cover;
@@ -62,7 +62,7 @@
 }
 .header__btn:hover { background-color: #08d9d6; }
 
-/* NAVIGATOR */
+/* # NAVIGATOR */
 .gnb {
     background-color: rgba(37, 42, 52, 1);
     color: white;
@@ -76,9 +76,7 @@
     /* z-index: 1000; */
     /* padding: 0 auto; */
 }
-.gnb__menu {
-    margin: 0 auto;
-}
+.gnb__menu { margin: 0 auto; }
 .gnb__item {
     padding: 5px 0;
     text-decoration: none;
@@ -89,61 +87,48 @@
     font-weight: 800;
 }
 
-section { 
+/* Common Elements */
+.section {
     padding-top: 60px;
     padding-bottom: 40px;
-}
-.inner-container {
     text-align: center;
 }
-.content-header > h2 {
-    display: inline-block;
+.section__title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+    letter-spacing: 2px;
 }
-hr.hr-under-content-header {
+/* bootstrap으로 인해 선택자를 tag.class 형식으로 지정함. */
+hr.section__title-underline { 
     display: inline-block;
     margin: 0 auto 40px; 
     width: 80px;
-    height: 4px;
+    height: 4px; 
     background-color: black;
 }
+hr.section__title-underline--white { background-color: white; }
+.section__content { margin-bottom: 40px; }
 
-.content-box {
-    margin-bottom: 40px;
-}
-
-
-/*
-    # ABOUT ME
-*/
-#about {
-    background-color: white;
-}
-.about-text {
+/* # ABOUT ME */
+.about { background-color: white; }
+.about__text {
     text-align: justify;
     font-family: 'Noto Sans KR', sans-serif;
 }
-.about-text > h4 {
+.about__text-title {
     font-size: 20px;
     font-weight: 700;
 }
-.about-text > p {
-    margin-bottom: 20px;
-}
-.about-table {
-    text-align: left;
-}
-#aboutTable {
+.about__text-content { margin-bottom: 20px; }
+.about__table {
     font-family: 'Montserrat', sans-serif;
     margin: 0 auto;
     max-width: 500px;
+    text-align: left;
 }
-
-#aboutTable > tr > th {
-    font-weight: 700;
-}
-.table-icon {
+.about__table th { font-weight: 700; }
+.about__table td:last-child { padding-left: 16px; }
+.about__icon-bg {
     display: flex;
     align-items: center;
     text-align: center;
@@ -152,33 +137,29 @@ hr.hr-under-content-header {
     height: 25px;
     width: 25px;
 }
-.table-icon > i {
+.about__icon {
     display: inline-block;
     margin: 0 auto;
     color: white;
     padding: 2px;
 }
-#aboutTable ul {
+.about__list {
     padding-left: 16px;
+    list-style-type: disc;
 }
-#aboutTable ul:last-child {
-    margin-bottom: 0px;
-}
+.about__list:last-child { margin-bottom: 0px; }
 @media(max-width: 424px) {
-    #aboutTable {
+    .about__table {
         width: 100%;
         font-size: 0.7em;
     }
-    .table-icon {
+    .about__icon-bg {
         height: 18px;
         width: 18px;
     }
 }
 
-.cursor-hand {
-    cursor: pointer;
-}
-
+/* # SKILL */
 .hex-outer {
     clip-path: polygon(50% 0, 100% 30%, 100% 70%, 50% 100%, 0% 70%, 0 30%);
     filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 1.0)) drop-shadow(0 2px 2px rgba(255, 255, 255, 1.0));
@@ -374,9 +355,7 @@ hr.hr-under-content-header {
     background-color: #252a34;
     color: white;
 }
-hr.hr-white {
-    background-color: white;
-}
+
 #aboutSkillHeader {
     width: 100%; height: 60px;
     /* display: flex;
