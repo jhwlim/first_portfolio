@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* HEADER */
 .header {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/header_bg3.jpg');
     background-size: cover;
@@ -8,10 +12,10 @@
     min-height: 400px;
     display: flex;
     align-items: center;
-    animation-duration: 2s;
-    animation-name: headerbgdarker;
+    animation-duration: 1s;
+    animation-name: fade-in;
 }
-@keyframes headerbgdarker {
+@keyframes fade-in {
     from { opacity: 0.0; }
     to { opacity: 1.0; }
 }
@@ -20,14 +24,13 @@
     width: 375px;
     text-align: center;
     animation-duration: 2s;
-    animation-delay: 0s;
-    animation-name: header-content-down;
+    /* animation-delay: 0s; */
+    animation-name: move-down;
 }
-@keyframes header-content-down {
+@keyframes move-down {
     from {margin-bottom: 100%;}
     to {margin-bottom: 0;}
 }
-
 .header__text {
     margin-bottom: 40px;
     font-family: 'Nanum Pen Script', cursive;
@@ -36,21 +39,17 @@
     line-height: 80px;
 }
 @media (max-width: 374px) {
-    .header--narrow::after {
+    .header__text--narrow::after {
         content: "";
         display: block;
     }
 }
-
 .header__name {
     letter-spacing: 6px;
     font-size: 44px;
     /* color: white; */
     color: #ff2e63;    
     border-bottom: 2px solid white;
-}
-.header__name:hover {
-    color: #ff2e63;
 }
 .header__btn {
     background-color: transparent;
