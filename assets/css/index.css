@@ -315,13 +315,14 @@ hr.section__title-underline--white { background-color: white; }
 /*
     # CONTACT
 */
-#contact {
+.contact {
     background-color: darkgray;
 }
-#contactContent {
+.contact__content {
     width: 300px;
     margin: 0 auto;
+    padding-bottom: 40px;
 }
-#contactContent * {
-    padding: 0px;
+.contact__info {
+    margin: 0;
 }
