@@ -17,7 +17,7 @@
 <!-- my css -->
 <link rel="stylesheet" href="assets/css/common.css">
 <link rel="stylesheet" href="assets/css/index.css">
-
+<link rel="stylesheet" href="assets/css/index_js.css">
 <!-- Bootstrap-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 <!-- jQuery-->
@@ -37,7 +37,7 @@
     </div>    
 </header>
 
-<nav class="gnb">
+<nav id="navigator" class="gnb">
     <div class="row gnb__menu">
         <a href="#header" class="col-sm gnb__item">HOME</a>
         <a href="#about" class="col-sm gnb__item">ABOUT ME</a>
@@ -51,8 +51,8 @@
     <div class="container-lg">
         <h2 class="section__title">ABOUT ME</h2>
         <hr class="section__title-underline">    
-        <div class="row">
-            <article class="col-lg section__content">
+        <article class="row section__content">
+            <div class="col-lg">
                 <div class="about__text">
                     <h4 class="about__text-title">써 노루, 별 비둘기, 없이</h4>
                     <p class="about__text-content">
@@ -63,8 +63,8 @@
                         흙으로 하늘에는 무덤 때 청춘이 동경과 내일 버리었습니다. 말 불러 남은 별이 내 흙으로 위에 이름자를 듯합니다. 아침이 그러나 계절이 부끄러운 말 봅니다. 별들을 속의 새워 오는 이름과, 겨울이 나는 있습니다. 위에도 하나 별 거외다. 이름을 비둘기, 소학교 별을 듯합니다.
                     </p>
                 </div>
-            </article>
-            <article class="col-lg section__content">
+            </div>
+            <div class="col-lg">
                 <table class="table about__table">
                     <tbody>
                         <tr>
@@ -80,9 +80,7 @@
                         <tr>
                             <td><div class="about__icon-bg table-icon"><i class="fab fa-blogger-b about__icon"></i></div></td>
                             <th>BLOG</th>
-                            <td>
-                                <a href="https://jhwlim.github.io/">https://jhwlim.github.io/</a>
-                            </td>
+                            <td><a href="https://jhwlim.github.io/">https://jhwlim.github.io/</a></td>
                         </tr>
                         <tr>
                             <td><div class="about__icon-bg table-icon"><i class="fas fa-graduation-cap about__icon"></i></div></td>
@@ -111,8 +109,8 @@
                         </tr>
                     </tbody>
                 </table>        
-            </article>
-        </div>
+            </div>
+        </article>
     </div>
 </section>
 
@@ -120,181 +118,116 @@
     <div class="container-lg">
         <h2 class="section__title">SKILL</h2>
         <hr class="section__title-underline section__title-underline--white">   
-        <div class="text-area">
-            흙으로 하늘에는 무덤 때 청춘이 동경과 내일 버리었습니다. 말 불러 남은 별이 내 흙으로 위에 이름자를 듯합니다. 아침이 그러나 계절이 부끄러운 말 봅니다. 별들을 속의 새워 오는 이름과, 겨울이 나는 있습니다. 위에도 하나 별 거외다. 이름을 비둘기, 소학교 별을 듯합니다.
-        </div>
-        <div class="row">
+        <article class="section__content">
+            <p>
+                흙으로 하늘에는 무덤 때 청춘이 동경과 내일 버리었습니다. 말 불러 남은 별이 내 흙으로 위에 이름자를 듯합니다. 아침이 그러나 계절이 부끄러운 말 봅니다. 별들을 속의 새워 오는 이름과, 겨울이 나는 있습니다. 위에도 하나 별 거외다. 이름을 비둘기, 소학교 별을 듯합니다.
+            </p>    
+        </article>
+        <article class="row section__content no-dragging">
             <div class="col-lg">
-                
-                <div id="aboutSkillHeader" class="content-subheader">
-                    <h3 id="aboutSkillAll" class="cursor-hand about-skill-header-selected">ALL</h3>
-                    <h3 id="aboutSkillFront" class="cursor-hand">Front</h3>
-                    <h3 id="aboutSkillBack" class="cursor-hand">Back</h3>
-                </div>
-                
-                <div id="about-skill" class="content no-dragging">
-                    <div class="about-skill-row">
-                        <div class="hex-outer not-frontend">
-                            <label for="skillSpring" class="cursor-hand">
-                                <div class="hex-inner">
-                                    <img src="assets/images/spring_logo.png" alt="">
-                                </div>
-                                <div class="hex-inner hex-on-mouse">
-                                    <span></span>
-                                </div>
-                            </label>
-                        </div>
-                        <div class="hex-blank">
-                            <div class="hex-inner">
-                                <img src="assets/images/blank.png"></img>
-                            </div>
-                        </div>
+                <ul id="aboutSkillHeader" class="skill__selector-list">
+                    <li id="aboutSkillAll" class="skill__selector cursor-hand skill__selector--selected">ALL</li>
+                    <li id="aboutSkillFront" class="skill__selector cursor-hand">Front</li>
+                    <li id="aboutSkillBack" class="skill__selector cursor-hand">Back</li>
+                </ul>
+                <div class="skill__logos">
+                    <div class="skill__logos-row">
+                        <label for="skillSpring" class="skill__hex-outer skill__hex-outer--shadow cursor-hand not-frontend">
+                            <figure class="skill__hex">
+                                <img src="assets/images/spring_logo.png" alt="spring logo" class="skill__logo">
+                            </figure>
+                        </label>
+                        <label class="skill__hex-outer">
+                            <figure class="skill__hex">
+                                <img src="assets/images/blank.png" alt="blank__logo">
+                            </figure>
+                        </label>
                     </div>
-                    <div class="about-skill-row">
-                        <div class="hex-outer not-backend">
-                            <label for="skillHtml" class="cursor-hand">
-                                <div class="hex-inner">
-                                    <img src="assets/images/html_logo.png" alt="">
-                                </div>
-                                <div class="hex-inner hex-on-mouse">
-                                    <span></span>
-                                </div>
-                            </label>
-                        </div>
-                        <div class="hex-outer not-backend">
-                            <label for="skillCss" class="cursor-hand">
-                                <div class="hex-inner">
-                                    <img src="assets/images/css_logo.png" alt="">
-                                </div>
-                                <div class="hex-inner hex-on-mouse">
-                                    <span></span>
-                                </div>
-                            </label>
-                        </div>
-                        <div class="hex-outer not-backend">
-                            <label for="skillJs" class="cursor-hand">
-                                <div class="hex-inner">
-                                    <img src="assets/images/js_logo.png" alt="">
-                                </div>
-                                <div class="hex-inner hex-on-mouse">
-                                    <span></span>
-                                </div>
-                            </label>
-                        </div>    
+                    <div class="skill__logos-row">
+                        <label for="skillHtml" class="skill__hex-outer skill__hex-outer--shadow cursor-hand not-backend">
+                            <figure class="skill__hex">
+                                <img src="assets/images/html_logo.png" alt="html logo" class="skill__logo">
+                            </figure>
+                        </label>
+                        <label for="skillCss" class="skill__hex-outer skill__hex-outer--shadow cursor-hand not-backend">
+                            <figure class="skill__hex">
+                                <img src="assets/images/css_logo.png" alt="css logo" class="skill__logo">
+                            </figure>
+                        </label>
+                        <label for="skillJs" class="skill__hex-outer skill__hex-outer--shadow cursor-hand not-backend">
+                            <figure class="skill__hex">
+                                <img src="assets/images/js_logo.png" alt="javascript logo" class="skill__logo">
+                            </figure>
+                        </label>        
                     </div>  
-                    <div class="about-skill-row">
-                        <div class="hex-outer not-backend">
-                            <label for="skillJQuery" class="cursor-hand">
-                                <div class="hex-inner">
-                                    <img src="assets/images/jquery_logo.png" alt="">
-                                </div>
-                                <div class="hex-inner hex-on-mouse">
-                                    <span></span>
-                                </div>
-                            </label>
-                        </div>
-                        <div class="hex-outer">
-                            <label for="skillGit" class="cursor-hand">
-                                <div class="hex-inner">
-                                    <img src="assets/images/git_logo.png" alt="">
-                                </div>
-                                <div class="hex-inner hex-on-mouse">
-                                    <span></span>
-                                </div>
-                            </label>
-                        </div>  
+                    <div class="skill__logos-row">
+                        <label for="skillJQuery" class="skill__hex-outer skill__hex-outer--shadow cursor-hand not-backend">
+                            <figure class="skill__hex">
+                                <img src="assets/images/jquery_logo.png" alt="jQuery logo" class="skill__logo">
+                            </figure>
+                        </label>
+                        <label for="skillGit" class="skill__hex-outer skill__hex-outer--shadow cursor-hand">
+                            <figure class="skill__hex">
+                                <img src="assets/images/git_logo.png" alt="git logo" class="skill__logo">
+                            </figure>
+                        </label>
                     </div>  
                 </div>
             </div>
-            <div id="aboutSkillBoxCol" class="col-lg">
-                <div id="aboutSkillBox" class="skill-explain-content-box">
-                    <div id="skillSpring" class="skill-explain-content-row">
-                        <div class="skill-explain-content skill-explain-name">Spring</div>
-                        <div class="skill-explain-content skill-explain-bar">
-                            <div style="width:70%;"></div>
-                            <span>70%</span>
+            <div class="col-lg">
+                <div id="aboutSkillBox" class="skill-bar">
+                    <div id="skillSpring" class="skill-bar__row">
+                        <div class="skill-bar__item skill-bar__name">Spring</div>
+                        <div class="skill-bar__item skill-bar__fill-bg">
+                            <div class="skill-bar__fill" style="width:70%;"></div>
+                            <span class="skill-bar__percent">70%</span>
                         </div>
                     </div>
-                    <div id="skillSpringExplain" class="skill-explain-detail" style="display: none;">
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                    <div id="skillHtml" class="skill-explain-content-row">
-                        <div class="skill-explain-content skill-explain-name">HTML</div>
-                        <div class="skill-explain-content skill-explain-bar">
-                            <div style="width:50%;"></div>
-                            <span>50%</span>
+                    <div id="skillHtml" class="skill-bar__row">
+                        <div class="skill-bar__item skill-bar__name">HTML</div>
+                        <div class="skill-bar__item skill-bar__fill-bg">
+                            <div class="skill-bar__fill" style="width:50%;"></div>
+                            <span class="skill-bar__percent">50%</span>
                         </div>
                     </div>
-                    <div id="skillHtmlExplain" class="skill-explain-detail" style="display: none;">
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                    <div id="skillCss" class="skill-explain-content-row">
-                        <div class="skill-explain-content skill-explain-name">CSS</div>
-                        <div class="skill-explain-content skill-explain-bar">
-                            <div style="width:50%;"></div>
-                            <span>50%</span>
+                    <div id="skillCss" class="skill-bar__row">
+                        <div class="skill-bar__item skill-bar__name">CSS</div>
+                        <div class="skill-bar__item skill-bar__fill-bg">
+                            <div class="skill-bar__fill" style="width:50%;"></div>
+                            <span class="skill-bar__percent">50%</span>
                         </div>
                     </div>
-                    <div id="skillCssExplain" class="skill-explain-detail" style="display: none;">
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                    <div id="skillJs" class="skill-explain-content-row">
-                        <div class="skill-explain-content skill-explain-name">JavaScript</div>
-                        <div class="skill-explain-content skill-explain-bar">
-                            <div style="width:50%;"></div>
-                            <span>50%</span>
+                    <div id="skillJs" class="skill-bar__row">
+                        <div class="skill-bar__item skill-bar__name">JavaScript</div>
+                        <div class="skill-bar__item skill-bar__fill-bg">
+                            <div class="skill-bar__fill" style="width:50%;"></div>
+                            <span class="skill-bar__percent">50%</span>
                         </div>
                     </div>
-                    <div id="skillJsExplain" class="skill-explain-detail" style="display: none;">
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                    <div id="skillJQuery" class="skill-explain-content-row">
-                        <div class="skill-explain-content skill-explain-name">jQuery</div>
-                        <div class="skill-explain-content skill-explain-bar">
-                            <div style="width:60%;"></div>
-                            <span>60%</span>
+                    <div id="skillJQuery" class="skill-bar__row">
+                        <div class="skill-bar__item skill-bar__name">jQuery</div>
+                        <div class="skill-bar__item skill-bar__fill-bg">
+                            <div class="skill-bar__fill" style="width:60%;"></div>
+                            <span class="skill-bar__percent">60%</span>
                         </div>
                     </div>
-                    <div id="skillJQueryExplain" class="skill-explain-detail" style="display: none;">
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                    <div id="skillGit" class="skill-explain-content-row">
-                        <div class="skill-explain-content skill-explain-name">Git</div>
-                        <div class="skill-explain-content skill-explain-bar">
-                            <div style="width:50%;"></div>
-                            <span>50%</span>
+                    <div id="skillGit" class="skill-bar__row">
+                        <div class="skill-bar__item skill-bar__name">Git</div>
+                        <div class="skill-bar__item skill-bar__fill-bg">
+                            <div class="skill-bar__fill" style="width:50%;"></div>
+                            <span class="skill-bar__percent">50%</span>
                         </div>
                     </div>
-                    <div id="skillGitExplain" class="skill-explain-detail" style="display: none;">
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                    <!-- <div id="skillExplain" class="skill-bar__detail"> -->
+                        <ul class="skill-bar__text">
+                            <li>흙으로 하늘에는 무덤 때 청춘이 동경과 내일 버리었습니다.</li>
+                            <li>말 불러 남은 별이 내 흙으로 위에 이름자를 듯합니다.</li>
+                            <li>아침이 그러나 계절이 부끄러운 말 봅니다.</li>
                         </ul>
-                    </div>
+                    <!-- </div> -->
                 </div>
             </div>
-        </div>
+        </article>
     </div>
 </section>
 

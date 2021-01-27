@@ -32,7 +32,7 @@ $(document).ready(function() {
         var windowHeight = $(this).height();
 
         if (top > windowTop && top < windowTop + windowHeight) {
-            $('.skill-explain-bar>div').addClass('fill-bar');
+            $('.skill-bar__fill').addClass('fill-bar');
         }
 
         var skillSection = $("#skill");
@@ -48,31 +48,33 @@ $(document).ready(function() {
         }
     });
 
-    $('.hex-outer').click(function() {
+    $('.skill__hex-outer--shadow').click(function() {
         const rotateClassName = 'hex-rotateY';
 
         if ($(this).hasClass(rotateClassName)) {
             $(this).removeClass(rotateClassName);
         } else {
-            $('.hex-outer').removeClass(rotateClassName);
+            $('.skill__hex-outer--shadow').removeClass(rotateClassName);
 
+            // only display skill bar selected
             $(this).addClass(rotateClassName);
             
-            var labelFor = $(this).children('label').attr('for');
+            var labelFor = $(this).attr('for');
             
-            $(".skill-explain-content-row").hide();
+            $(".skill-bar__row").hide();
             
-            $('.skill-explain-detail').hide();
+            // $('.skill-explain-detail').hide();
 
-            var barName = $('#' + labelFor).children('.skill-explain-name');
+            var barName = $('#' + labelFor).children('.skill-bar__name');
             barName.parent().show();
 
-            var bar = $('#' + labelFor).children('.skill-explain-bar').children('div');
+            var bar = $('#' + labelFor).children('.skill-bar__fill-bg').children('.skill-bar__fill');
             $(bar).removeClass('fill-bar');
             setTimeout(function() {
                 $(bar).addClass('fill-bar');    
             }, 1);
-            var detail = $('#' + labelFor + 'Explain').css('display', 'block');    
+            // var detail = $('#' + labelFor + 'Explain').css('display', 'block');   
+            $('.skill-bar__text').show();
         }
         
     });
@@ -98,10 +100,10 @@ $(document).ready(function() {
         $('.hex-outer.not-backend').addClass('hex-blur');
     });
 
-    $('#aboutSkillHeader>h3').click(function() {
-        if (!$(this).hasClass('about-skill-header-selected')) {
-            $('#aboutSkillHeader>h3').removeClass('about-skill-header-selected');
-            $(this).addClass('about-skill-header-selected');
+    $('.skill__selector').click(function() {
+        if (!$(this).hasClass('skill__selector--selected')) {
+            $('.skill__selector').removeClass('skill__selector--selected');
+            $(this).addClass('skill__selector--selected');
             
         }
     });
