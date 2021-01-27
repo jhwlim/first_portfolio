@@ -5,12 +5,12 @@ $(document).ready(function() {
     });
 
     // // 헤더 버튼 hover 이벤트
-    // $('#headerBtn').mouseover(function() {
-    //     $(this).html('구경하러가기');
-    // });
-    // $('#headerBtn').mouseout(function() {
-    //     $(this).text("궁금하신가요?");
-    // }); 
+    $('#headerBtn').mouseover(function() {
+        $(this).html('구경하러가기');
+    });
+    $('#headerBtn').mouseout(function() {
+        $(this).text("궁금하신가요?");
+    }); 
     
     // About-Skills 가 viewport에 들어왔을 때 확인하기
     function elementInViewPort(el) {
@@ -107,5 +107,13 @@ $(document).ready(function() {
             
         }
     });
+
+    // $('.portfolio__figure').mouseover(function() {
+    //     $(this).children('.portfolio__description').addClass('portfolio__description--display');
+    // });
+
+    // $('.portfolio__figure').mouseout(function() {
+    //     $(this).children('.portfolio__description').removeClass('portfolio__description--display');
+    // });
 
 });

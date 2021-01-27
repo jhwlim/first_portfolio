@@ -33,7 +33,7 @@
             <p>환영합니다.</p>
             <span class="header__text--narrow"><span class="header__name">홍길동</span>의</span> 포트폴리오 입니다.
         </h1>
-        <button id="homeBtn" class="header__btn">궁금하신가요?</button>
+        <button id="headerBtn" class="header__btn">궁금하신가요?</button>
     </div>    
 </header>
 
@@ -48,10 +48,10 @@
 </nav> 
 
 <section id="about" class="section about">
-    <div class="container-lg">
+    <div class="container-lg section__content">
         <h2 class="section__title">ABOUT ME</h2>
         <hr class="section__title-underline">    
-        <article class="row section__content">
+        <article class="row">
             <div class="col-lg">
                 <div class="about__text">
                     <h4 class="about__text-title">써 노루, 별 비둘기, 없이</h4>
@@ -115,15 +115,15 @@
 </section>
 
 <section id="skill" class="section skill">
-    <div class="container-lg">
+    <div class="container-lg section__content">
         <h2 class="section__title">SKILL</h2>
         <hr class="section__title-underline section__title-underline--white">   
-        <article class="section__content">
+        <article class="">
             <p>
                 흙으로 하늘에는 무덤 때 청춘이 동경과 내일 버리었습니다. 말 불러 남은 별이 내 흙으로 위에 이름자를 듯합니다. 아침이 그러나 계절이 부끄러운 말 봅니다. 별들을 속의 새워 오는 이름과, 겨울이 나는 있습니다. 위에도 하나 별 거외다. 이름을 비둘기, 소학교 별을 듯합니다.
             </p>    
         </article>
-        <article class="row section__content no-dragging">
+        <article class="row no-dragging">
             <div class="col-lg">
                 <ul id="aboutSkillHeader" class="skill__selector-list">
                     <li id="aboutSkillAll" class="skill__selector cursor-hand skill__selector--selected">ALL</li>
@@ -231,29 +231,28 @@
     </div>
 </section>
 
-<section id="portfoilo" class="section portfoilo">
-    <div class="container-lg">
+<section id="portfoilo" class="section portfolio">
+    <div class="container-lg section__content">
         <h2 class="section__title">PORTFOLIO</h2>
-        <hr class="section__title-underline">  
-        <div class="portfoilo-area">
-            <div class="row">
-                <div class="col-lg">
-                    <div class="portfoilo-unit">
-                        <img src="assets/images/header_bg.jpg" alt="">
-                        <div class="portfoilo-description">
-                            <span>#PROJECT1</span>
-                        </div>
+        <hr class="section__title-underline">
+        <article class="row portfolio__row">
+            <div class="col-lg portfolio__section">
+                <figure class="portfolio__figure">
+                    <img class="portfolio__img" src="assets/images/header_bg.jpg" alt="">
+                    <div class="portfolio__figure portfolio__description">
+                        <h3>#PROJECT1</h3>
                     </div>
-                </div>
-                <div class="col-lg">
-                    <div class="portfoilo-unit">
-                        <div class="portfoilo-description">
-                            <span>#PROJECT2</span>
-                        </div>
-                    </div> 
-                </div>
+                </figure>
             </div>
-        </div>
+            <div class="col-lg portfolio__section">
+                <figure class="portfolio__figure">
+                    <img class="portfolio__img" src="assets/images/header_bg.jpg" alt="">
+                    <div class="portfolio__figure portfolio__description">
+                        <h3>#PROJECT2</h3>
+                    </div>
+                </figure> 
+            </div>
+        </article>
     </div>
 </section>
 
