@@ -28,8 +28,9 @@
     animation-name: move-down;
 }
 @keyframes move-down {
-    from {margin-bottom: 200%;}
-    to {margin-bottom: 0;}
+    /* from {margin-bottom: 200%;} */
+    from {margin-top: -20%;}
+    /* to {margin-bottom: 0;} */
 }
 .header__text {
     margin-bottom: 40px;
@@ -285,11 +286,12 @@ hr.section__title-underline--white { background-color: white; }
     margin: 0 auto;
 }
 @media(max-width: 524px) {
+    .portfolio__section { padding: 0 12px; }
     .portfolio__figure {
-        padding: 0 12px;
         width: 100%;
-        height: auto;
-    }   
+        height: 100%;
+    }
+    .portfolio__description { width: calc(100% - 24px); }
 }
 .portfolio__img {
     width: 100%;
@@ -298,20 +300,46 @@ hr.section__title-underline--white { background-color: white; }
 .portfolio__description {
     display: none;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
     top: 0px; 
-    left: 0px;
     color: white;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
-    font-weight: 500;
-    letter-spacing: 2px;
     align-items: center;
     justify-content: center;
+    justify-content: space-between;
+    /* display: block; */
 }
-.portfolio__figure:hover .portfolio__description { display: flex; }
-
+.portfolio__figure:hover .portfolio__description { display: block; }
+.portfoilo__title {
+    margin-top: 80px;
+    letter-spacing: 3px;
+    font-size: 28px;
+    font-weight: 500;
+    animation: portfolio-title-down 1.5s;
+}
+.portfoilo__btn {
+    font-size: 18px;
+    padding: 8px 14px;
+    margin-top: 60px;
+    animation: portfolio-btn-up 1.5s;
+    border: 3px solid white;
+    background-color: transparent;
+    color: white;
+}
+.portfoilo__btn:hover {
+    background-color: white;
+    border-color: #ff2e63;
+    border-width: 3px;
+    font-weight: 500;
+    color: #ff2e63;
+}
+@keyframes portfolio-title-down {
+    from { margin-top: 60px;}
+}
+@keyframes portfolio-btn-up {
+    from { margin-top: 100px;}
+}
 /*
     # CONTACT
 */
@@ -323,6 +351,4 @@ hr.section__title-underline--white { background-color: white; }
     margin: 0 auto;
     padding-bottom: 40px;
 }
-.contact__info {
-    margin: 0;
-}
+.contact__info { margin: 0; }

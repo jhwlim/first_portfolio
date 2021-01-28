@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-    $('#homeBtn').click(() => {
-        $('#navigator').focus();
+    $('#headerBtn').click(() => {
+        location.href="#about";
     });
 
     // // 헤더 버튼 hover 이벤트
