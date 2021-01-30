@@ -24,29 +24,29 @@ $(document).ready(function() {
         return top >= window.pageYOffset;
     }
 
-    $(window).scroll(function() {
-        var el = $('#aboutSkillBox');
-        var top = el.offset().top;
+    // $(window).scroll(function() {
+    //     var el = $('#aboutSkillBox');
+    //     var top = el.offset().top;
         
-        var windowTop = $(this).scrollTop();
-        var windowHeight = $(this).height();
+    //     var windowTop = $(this).scrollTop();
+    //     var windowHeight = $(this).height();
 
-        if (top > windowTop && top < windowTop + windowHeight) {
-            $('.skill-bar__fill').addClass('fill-bar');
-        }
+    //     if (top > windowTop && top < windowTop + windowHeight) {
+    //         $('.skill-bar__fill').addClass('fill-bar');
+    //     }
 
-        var skillSection = $("#skill");
-        var topOfSkillSection = skillSection.offset().top;
-        var bottomOfSkillSection = topOfSkillSection + skillSection.height() + 40;
-        var navHeight = $('nav').height();
-        if (windowTop >= topOfSkillSection - navHeight && windowTop <= bottomOfSkillSection) {
-            $('#navigator').css('background-color', 'rgba(255, 255, 255, 0.5)');
-            $('#navigator').css('color', 'rgba(37, 42, 52, 1)');
-        } else {
-            $('#navigator').css('background-color', 'rgba(37, 42, 52, 1)');
-            $('#navigator').css('color', 'white');
-        }
-    });
+    //     var skillSection = $("#skill");
+    //     var topOfSkillSection = skillSection.offset().top;
+    //     var bottomOfSkillSection = topOfSkillSection + skillSection.height() + 40;
+    //     var navHeight = $('nav').height();
+    //     if (windowTop >= topOfSkillSection - navHeight && windowTop <= bottomOfSkillSection) {
+    //         $('#navigator').css('background-color', 'rgba(255, 255, 255, 0.5)');
+    //         $('#navigator').css('color', 'rgba(37, 42, 52, 1)');
+    //     } else {
+    //         $('#navigator').css('background-color', 'rgba(37, 42, 52, 1)');
+    //         $('#navigator').css('color', 'white');
+    //     }
+    // });
 
     $('.skill__hex-outer--shadow').click(function() {
         const rotateClassName = 'hex-rotateY';
