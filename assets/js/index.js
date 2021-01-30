@@ -48,56 +48,27 @@ $(document).ready(function() {
     //     }
     // });
 
-    $('.skill__hex-outer--shadow').click(function() {
-        const rotateClassName = 'hex-rotateY';
-
-        if ($(this).hasClass(rotateClassName)) {
-            $(this).removeClass(rotateClassName);
-        } else {
-            $('.skill__hex-outer--shadow').removeClass(rotateClassName);
-
-            // only display skill bar selected
-            $(this).addClass(rotateClassName);
-            
-            var labelFor = $(this).attr('for');
-            
-            $(".skill-bar__row").hide();
-            
-            // $('.skill-explain-detail').hide();
-
-            var barName = $('#' + labelFor).children('.skill-bar__name');
-            barName.parent().show();
-
-            var bar = $('#' + labelFor).children('.skill-bar__fill-bg').children('.skill-bar__fill');
-            $(bar).removeClass('fill-bar');
-            setTimeout(function() {
-                $(bar).addClass('fill-bar');    
-            }, 1);
-            // var detail = $('#' + labelFor + 'Explain').css('display', 'block');   
-            $('.skill-bar__text').show();
-        }
-        
-    });
+    
 
     $('#aboutSkillAll').click(function() {
-        $('.hex-outer').removeClass('hex-rotateY');
-        $('.hex-outer').removeClass('hex-blur');
-        $(".skill-explain-bar>div").removeClass('fill-bar');
+        $('.skill__hex-outer--shadow').removeClass('hex-rotateY');
+        $('.skill__hex-outer--shadow').removeClass('hex-blur');
+        $(".skill-bar__fill").removeClass('fill-bar');
         setTimeout(function() {
-            $(".skill-explain-bar>div").addClass('fill-bar');
+            $(".skill-bar__fill").addClass('fill-bar');
         }, 1);
 
-        $('.skill-explain-detail').hide();    
+        $('.skill-bar__text').hide();    
         
-        $(".skill-explain-content-row").show();
+        $(".skill-bar__row").show();
     });
     $('#aboutSkillFront').click(function() {
-        $('.hex-outer').removeClass('hex-blur');
-        $('.hex-outer.not-frontend').addClass('hex-blur');
+        $('.skill__hex-outer--shadow').removeClass('hex-blur');
+        $('.not-frontend').addClass('hex-blur');
     });
     $('#aboutSkillBack').click(function() {
-        $('.hex-outer').removeClass('hex-blur');
-        $('.hex-outer.not-backend').addClass('hex-blur');
+        $('.skill__hex-outer--shadow').removeClass('hex-blur');
+        $('.not-backend').addClass('hex-blur');
     });
 
     $('.skill__selector').click(function() {
