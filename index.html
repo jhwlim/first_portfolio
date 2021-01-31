@@ -121,7 +121,7 @@
     <div class="container-lg section__content skill__content">
         <h2 class="section__title">SKILL</h2>
         <hr class="section__title-underline section__title-underline--white">   
-        <article class="">
+        <article class="skill__text">
             <p>
                 흙으로 하늘에는 무덤 때 청춘이 동경과 내일 버리었습니다. 말 불러 남은 별이 내 흙으로 위에 이름자를 듯합니다. 아침이 그러나 계절이 부끄러운 말 봅니다. 별들을 속의 새워 오는 이름과, 겨울이 나는 있습니다. 위에도 하나 별 거외다. 이름을 비둘기, 소학교 별을 듯합니다.
             </p>    
@@ -238,7 +238,7 @@
                     <img class="portfolio__img" src="assets/images/header_bg.jpg" alt="">
                     <div class="portfolio__figure portfolio__description">
                         <h3 class="portfoilo__title">#PROJECT1</h3>
-                        <button id="portfoiloId" class="portfoilo__btn" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="test1">READ MORE</button>
+                        <button id="portfolio1" class="portfoilo__btn" data-bs-toggle="modal" data-bs-target="#portfolioModal" data-bs-whatever="portfolio1">READ MORE</button>
                     </div>
                 </figure>
             </div>
@@ -247,35 +247,24 @@
                     <img class="portfolio__img" src="assets/images/header_bg3.jpg" alt="">
                     <div class="portfolio__figure portfolio__description">
                         <h3 class="portfoilo__title">#PROJECT2</h3>
-                        <button id="portfoiloId2" class="portfoilo__btn" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="test2">READ MORE</button>
+                        <button id="portfolio2" class="portfoilo__btn" data-bs-toggle="modal" data-bs-target="#portfolioModal" data-bs-whatever="portfolio2">READ MORE</button>
                     </div>
                 </figure> 
             </div>
         </article>
     </div>
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+    <div class="modal fade" id="portfolioModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <!-- <div class="modal-header">
-                    
-                </div> -->
-                <div class="modal-body">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                        <ol class="carousel-indicators">
+                <div class="modal-body portfolio-modal__content">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                        <!-- <ol class="carousel-indicators">
                             <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
                             <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
                             <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="./assets/images/header_bg.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="./assets/images/header_bg3.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="./assets/images/header_bg4.jpg" class="d-block w-100" alt="...">
-                            </div>
+                        </ol> -->
+                        <div class="carousel-inner portfolio-modal__imgs">
+                        
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -286,22 +275,18 @@
                             <span class="visually-hidden">Next</span>
                         </a>
                     </div>
-                    <form>
-                        <div class="mb-3">
-                            <label for="recipient-name" class="col-form-label">Recipient:</label>
-                            <input type="text" class="form-control" id="recipient-name">
-                        </div>
-                        <div class="mb-3">
-                            <label for="message-text" class="col-form-label">Message:</label>
-                            <textarea class="form-control" id="message-text"></textarea>
-                        </div>
-                    </form>
+                    <div class="portfolio-modal__description">
+                        <h3 class="portfolio-modal__title"></h3>
+                        <hr>
+                        <p class="portfolio-modal__summary"></p>
+                        <p class="portfolio-modal__role"></p>
+                        <p class="portfolio-modal__skill"></p>
+                        <p class="portfolio-modal__git-repo"></p>
+                    </div>
+                    
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <!-- <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Send message</button>
-                </div> -->
+                
             </div>
         </div>
       </div>

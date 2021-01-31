@@ -213,6 +213,9 @@ hr.section__title-underline--white { background-color: white; }
 .skill__content {
     /* background-color: rgba(37, 42, 52, 0.4); */
 }
+.skill__text {
+    font-family: 'Noto Sans KR', sans-serif;
+}
 .skill__selector-list {
     display: inline-block;
     width: 100%;
@@ -318,6 +321,7 @@ hr.section__title-underline--white { background-color: white; }
     text-align: left;
     padding-left: 18px;
     margin-top: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 .skill-bar__text li { margin-bottom: 20px; }
 
@@ -397,9 +401,24 @@ hr.section__title-underline--white { background-color: white; }
 @keyframes portfolio-btn-up {
     from { margin-top: 100px;}
 }
-/*
-    # CONTACT
-*/
+
+/* PORTFOLIO Modal*/
+.portfolio-modal__content {
+    padding: 0;
+}
+.portfolio-modal__description {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.portfoilo-modal__figure {
+    height: 340px;
+}
+.portfolio-modal__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* # CONTACT */
 .contact {
     background-color: var(--bg-dark);
 
