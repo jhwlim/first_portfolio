@@ -257,15 +257,8 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body portfolio-modal__content">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-                        <!-- <ol class="carousel-indicators">
-                            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
-                            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
-                            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
-                        </ol> -->
-                        <div class="carousel-inner portfolio-modal__imgs">
-                        
-                        </div>
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner portfolio-modal__imgs"></div>
                         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
@@ -277,16 +270,16 @@
                     </div>
                     <div class="portfolio-modal__description">
                         <h3 class="portfolio-modal__title"></h3>
-                        <hr>
                         <p class="portfolio-modal__summary"></p>
-                        <p class="portfolio-modal__role"></p>
-                        <p class="portfolio-modal__skill"></p>
-                        <p class="portfolio-modal__git-repo"></p>
+                        <hr>
+                        <p class="portfolio-modal__paragraph"><span class="portfolio-modal__description--light">기술스택 : </span><span class="portfolio-modal__skill"></span></p>
+                        <p class="portfolio-modal__paragraph"><span class="portfolio-modal__description--light">역할 : </span>
+                        <ul class="portfolio-modal__role"></ul>
+                        </p>
+                        <p class="portfolio-modal__paragraph"><span class="portfolio-modal__description--light">Git Repo : </span><span class="portfolio-modal__git-repo"></span></p>
                     </div>
-                    
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close portfolio-modal__close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                
             </div>
         </div>
       </div>
@@ -298,15 +291,7 @@
         <hr class="section__title-underline section__title-underline--white">  
         <article class="contact__content">
             <span class="contact__icon-bg"><i class="fas fa-envelope contact__icon"></i></span>
-            <p class="contact__email">jhwlim25@gmail.com</p>
-            <!-- <table class="table table-borderless contact__info">
-                <tr>
-                    <td><div class="table-icon"><i class="fas fa-envelope"></i></div></td>
-                    <th>E-mail :</th>
-                    <td>jhwlim25@gmail.com</td>
-                </tr>
-            </table> -->
-            
+            <p class="contact__email">jhwlim25@gmail.com</p>          
         </article>
     </div>
 </section>

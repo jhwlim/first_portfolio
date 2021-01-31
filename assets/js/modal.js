@@ -55,14 +55,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function setPortfolioRole(target, roles) {
         target.innerHTML = "";
-        var ulElement = document.createElement('ul');
         for (i in roles) {
             var liElement = document.createElement('li');
             liElement.innerText = roles[i];
             console.log(liElement);
-            ulElement.appendChild(liElement);
+            target.appendChild(liElement);
         }
-        target.appendChild(ulElement);
     }
 
     function setPortfolioGitRepo(target, gitRepo) {
