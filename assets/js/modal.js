@@ -64,7 +64,8 @@ document.addEventListener("DOMContentLoaded", function() {
         var portfolioGitRepo = portfolioModal.querySelector('.portfolio-modal__git-repo');
         setPortfolioGitRepo(portfolioGitRepo, portfolioInfo.gitRepo);
         
-    })
+    });
+
     function setPortfolioImgs(target, imgs) {
         target.innerHTML = "";
         for (i in imgs) {
@@ -85,17 +86,14 @@ document.addEventListener("DOMContentLoaded", function() {
             target.appendChild(figure);
         }
     }
-
     function setPortfolioRole(target, roles) {
         target.innerHTML = "";
         for (i in roles) {
             var liElement = document.createElement('li');
             liElement.innerText = roles[i];
-            console.log(liElement);
             target.appendChild(liElement);
         }
     }
-
     function setPortfolioGitRepo(target, gitRepo) {
         target.innerHTML = "";
         var a = document.createElement('a');

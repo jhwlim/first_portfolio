@@ -27,5 +27,14 @@ const skillBarTexts = {
         '까닭이요, 아침이 지나고 어머님, 있습니다. 가슴속에 멀리 것은 별을 피어나듯이 가득 아름다운 아직 동경과 버리었습니다.', 
         '별빛이 별 것은 청춘이 아침이 흙으로 까닭이요, 내린 있습니다.'
     ],
-};
-
+};    
+function updateSkillBarText(labelFor) {
+    var textArr = skillBarTexts[labelFor];
+    var skillBarText = document.getElementById('skillBarText'); 
+    skillBarText.innerHTML = "";
+    for (i in textArr) {
+        var listItem = document.createElement('li');
+        listItem.innerText = textArr[i];
+        skillBarText.appendChild(listItem);
+    }
+}

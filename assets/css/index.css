@@ -1,13 +1,6 @@
-:root {
-    --basic-white: white;
-    --fill-blue: #08d9d6; 
-    --selected-red: #ff2e63; 
-    --bg-dark: #1e2940;
-    
-    /* 75% */
-    --bg-dark--opacity: #1e2940e5;
-    --bg-gray: #eaeaea;
-    
+:root { 
+    --cyan-dark: #08d9d6;
+    --red-pink: #ff2e63;
 }
 /* # HEADER */
 .header {
@@ -54,7 +47,7 @@
 .header__name {
     letter-spacing: 6px;
     font-size: 44px;
-    color: var(--selected-red);    
+    color: var(--red-pink);    
     border-bottom: 2px solid white;
 }
 .header__btn {
@@ -66,11 +59,11 @@
     padding: 5px 30px;
     width: 180px;
 }
-.header__btn:hover { background-color: var(--fill-blue); }
+.header__btn:hover { background-color: var(--cyan-dark); }
 
 /* # NAVIGATOR */
 .gnb {
-    background-color: var(--fill-blue);
+    background-color: var(--cyan-dark);
     border-bottom: 1px solid white;
     color: white;
     text-align: center;
@@ -90,11 +83,11 @@
 }
 .gnb__item--selected {
     background-color: white;
-    color: var(--selected-red); 
+    color: var(--red-pink); 
     font-weight: 800;
 }
 .gnb__item:hover {
-    color: var(--selected-red); 
+    color: var(--red-pink); 
     font-weight: 800;
 }
 .gnb__icon {
@@ -104,14 +97,12 @@
     left: 5px;
     display: none;
 }
-@media(max-width: 576px) {
+@media(max-width: 575px) {
     .gnb__item--selected {
         background-color: rgba(10, 2, 39, 0.95);
         color: white;
     }
-    .gnb__item--emphasize {
-        color: var(--selected-red);
-    }
+    .gnb__item--emphasize { color: var(--red-pink); }
     .gnb__icon { display: inline-block; }
 }
 /* Common Elements */
@@ -187,7 +178,6 @@ hr.section__title-underline--white { background-color: white; }
 
 /* # SKILL */
 .skill {
-    background-color: var(--bg-dark);
     color: white;
     background: linear-gradient(rgba(30, 41, 64, 0.7), rgba(30, 41, 64, 0.7)), url('../images/header_bg3.jpg');
     background-size: cover;
@@ -221,7 +211,7 @@ hr.section__title-underline--white { background-color: white; }
     max-width: 100px;
     
 }
-.skill__selector--selected { background-color: var(--selected-red); }
+.skill__selector--selected { background-color: var(--red-pink); }
 .skill__logos-row { margin-bottom: -30px; }
 .skill__logos-row:last-child { margin-bottom: 0px; }
 .skill__hex-outer {
@@ -271,7 +261,7 @@ hr.section__title-underline--white { background-color: white; }
 }
 .skill-bar__name {
     min-width: 120px; 
-    background-color: var(--fill-blue);
+    background-color: var(--cyan-dark);
     color: white;
     text-align: left;
     font-weight: 600;
@@ -290,7 +280,7 @@ hr.section__title-underline--white { background-color: white; }
 }
 .skill-bar__fill {
     display: inline-block;
-    background-color: var(--fill-blue);
+    background-color: var(--cyan-dark);
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
 }
@@ -364,10 +354,10 @@ hr.section__title-underline--white { background-color: white; }
 }
 .portfolio__btn:hover {
     background-color: white;
-    border-color: var(--selected-red);
+    border-color: var(--red-pink);
     border-width: 3px;
     font-weight: 500;
-    color: var(--selected-red);
+    color: var(--red-pink);
 }
 @keyframes portfolio-title-down {
     from { margin-top: 50px;}
@@ -441,7 +431,6 @@ hr.section__title-underline--white { background-color: white; }
     background-attachment: fixed;
     font-family: 'Montserrat', sans-serif;
     padding: 40px;
-    color: var(--bg-dark);
 }
 .contact__container {
     width: 500px;
@@ -460,15 +449,12 @@ hr.section__title-underline--white { background-color: white; }
     height: 70px;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--bg-dark);
-    border-color: white;
+    border: 1px solid white;
     border-radius: 50%;
     margin: 0 auto 20px;
 }
 .contact__icon { font-size: 30px; }
-.contact__icon:hover {
-    color: var(--fill-blue);
-}
+.contact__icon:hover { color: var(--cyan-dark); }
 .contact__email {
     letter-spacing: 1px;
     font-size: 16px;
@@ -487,11 +473,11 @@ hr.section__title-underline--white { background-color: white; }
     font-weight: 500;
 }
 .footer__text--amphasize {
-    color: var(--selected-red);
+    color: var(--red-pink);
     font-weight: 700;
 }
 
-/* js */
+/* animation by js */
 .hex-rotateY {
     animation: rotateY 2s infinite linear;
 }
