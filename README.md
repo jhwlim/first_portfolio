@@ -1,10 +1,16 @@
-# portfolio
-#반응형 웹 디자인 #html #css #js
+<style>
+    .btn-basic {
+        background-color: #00af91;
+        color: white;
+        border: 0;
+        padding: 2px 10px;
+        border-radius: 5px;
+    }
+</style>
 
-## 파레트 
-- #08d9d6, #252a34, #ff2e63, #eaeaea
-- #dddddd, #222831, #30475e, #f05454
+![home](./assets/images/portfolio/home.png)
 
-- #111d5e, #c70039
-- #ec4646, #663f3f, #51c2d5, #bbf1fa
-- #ef4f4f, #ee9595, #ffcda3, #74c7b8
+# 개인 포트폴리오 사이트
+개인 포트폴리오 사이트
+
+[<button class="btn-basic">바로가기</button>](https://jhwlim.github.io/portfolio/)

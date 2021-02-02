@@ -30,7 +30,7 @@ const portfolios = {
         skill : 'Objective-C, Swift, Xcode 9',
         gitRepo : 'https://github.com'
     },
-}
+};
 document.addEventListener("DOMContentLoaded", function() {
     const portfolioModal = document.getElementById('portfolioModal');
     portfolioModal.addEventListener('show.bs.modal', function (event) {
